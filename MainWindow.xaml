@@ -7,6 +7,22 @@
         mc:Ignorable="d"
         Title="MainWindow" Height="450" Width="800">
     <Grid>
-
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="13*"/>
+            <ColumnDefinition Width="130*"/>
+            <ColumnDefinition Width="13*"/>
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="104*"/>
+            <RowDefinition Height="40*"/>
+            <RowDefinition Height="25*"/>
+            <RowDefinition Height="60*"/>
+            <RowDefinition Height="100*"/>
+            <RowDefinition Height="105*"/>
+        </Grid.RowDefinitions>
+        <Label  Grid.Row="0" Grid.ColumnSpan="3" FontSize="22" Margin="10,10,10,10" FontFamily="Dubai Light" VerticalAlignment="Center" HorizontalAlignment="Center">Введите десять чисел через, разделяя их пробелом, в тестовове поле.</Label>
+        <TextBox x:Name="TextBox1" Grid.Column="1" Margin="0,104,0,0" Grid.RowSpan="2"/>
+        <Button x:Name="Button1" Grid.Column="1" Grid.Row="2" Margin="0,25,0,0" Grid.RowSpan="2" FontSize="24" Click="Button1_Click">Выполнить</Button>
+        <Label x:Name="Label1" Grid.Row="4" Grid.ColumnSpan="3" FontSize="22" Margin="10,10,10,10" FontFamily="Dubai Light" HorizontalAlignment="Center" VerticalAlignment="Center"/>
     </Grid>
 </Window>

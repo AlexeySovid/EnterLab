@@ -24,5 +24,36 @@ namespace Enter
         {
             InitializeComponent();
         }
+
+        private void Button1_Click(object sender, RoutedEventArgs e)
+        {
+            string EnterText = TextBox1.Text;
+            string[] EnterNums = EnterText.Split(' ');
+            
+            int[] Nums = new int[10];
+
+            int temp;
+
+            for (int i = 0; i < EnterNums.Length; i++) 
+            { 
+                Nums[i] = Convert.ToInt32(EnterNums[i]); 
+
+            }
+
+            for (int j = 0; j < Nums.Length - 1; j++)
+            {
+                for (int k = 0; k < Nums.Length; k++)
+                {
+                    if (Nums[k] > Nums[j])
+                    {
+                        temp = Nums[j];
+                        Nums[j] = Nums[k];
+                        Nums[k] = temp;
+                    }
+                }
+            }
+
+            Label1.Content = Convert.ToString(Nums[0]);
+        }
     }
 }
